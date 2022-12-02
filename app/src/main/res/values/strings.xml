@@ -5,4 +5,9 @@
     <string name="home">Home</string>
     <string name="about">About</string>
     <string name="faq">FAQ</string>
+    <string name="register_page">Register Page</string>
+    <string name="login_page">Login Page</string>
+    <string name="home_page">Home Page</string>
+    <string name="faq_page">FAQ Page</string>
+    <string name="about_page">About Page</string>
 </resources>
