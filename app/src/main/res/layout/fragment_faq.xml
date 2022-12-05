@@ -6,19 +6,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/sandstorm">
 
-        <TextView
-            android:id="@+id/textView3"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="240dp"
-            android:layout_marginBottom="451dp"
-            android:text="@string/faq_page"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="313dp"
+            android:fontFamily="sans-serif-black"
+            android:text="FAQ"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

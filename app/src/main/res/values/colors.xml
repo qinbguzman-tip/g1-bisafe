@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cyan">#00ccd3</color>
     <color name="sandstorm">#ffcc33</color>
+    <color name="light_yellow">#fff684</color>
+    <color name="dark_yellow">#ffd700</color>
 </resources>
