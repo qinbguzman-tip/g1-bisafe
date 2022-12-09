@@ -50,5 +50,7 @@ dependencies {
     // Material Design
     implementation 'com.google.android.material:material:1.7.0'
 
+    // Expandable
+    implementation 'androidx.cardview:cardview:1.0.0'
 
 }
