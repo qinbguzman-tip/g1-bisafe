@@ -14,6 +14,7 @@ import com.example.g1_final_project.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var appBarConfiguration: AppBarConfiguration
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
