@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item android:id="@+id/homeFragment"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/div1">
+        <item
+            android:id="@+id/homeFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_baseline_home_24"
             android:title="Home"
-            android:icon="@drawable/ic_baseline_home_24"/>
-        <item android:id="@+id/journeyFragment"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/journeyFragment"
+            android:checkable="true"
+            android:icon="@drawable/bike"
             android:title="Journey"
-            android:icon="@drawable/bike" />
-        <item android:id="@+id/historyFragment"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/historyFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_baseline_history_24"
             android:title="History"
-            android:icon="@drawable/ic_baseline_history_24"/>
-        <item android:id="@+id/settingsFragment"
-            android:title="Settings"
-            android:icon="@drawable/ic_baseline_settings_24"/>
+            app:showAsAction="ifRoom" />
     </group>
 
-    <group android:checkableBehavior="single">
-        <item android:id="@+id/aboutFragment"
+    <group
+        android:id="@+id/div2">
+        <item
+            android:id="@+id/settingsFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/aboutFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_baseline_supervised_user_circle_24"
             android:title="About"
-            android:icon="@drawable/ic_baseline_supervised_user_circle_24"/>
-        <item android:id="@+id/faqFragment"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/faqFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_baseline_help_24"
             android:title="FAQ"
-            android:icon="@drawable/ic_baseline_help_24"/>
+            app:showAsAction="ifRoom" />
     </group>
 </menu>
