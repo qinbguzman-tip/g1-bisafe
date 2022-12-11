@@ -12,21 +12,26 @@
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/drawable/ic_baseline_speed_24.xml" value="0.3635" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/drawable/round_border.xml" value="0.212" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/drawable/shape_box.xml" value="0.1" />
-        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/abs_layout.xml" value="0.296195652173913" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/activity_login2.xml" value="0.1" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/faq_row.xml" value="0.1" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_about.xml" value="0.33" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_faq.xml" value="0.33" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_history.xml" value="0.33" />
-        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_home.xml" value="0.49195710455764075" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_home.xml" value="0.15" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_journey.xml" value="0.33" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_login.xml" value="0.33" />
-        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_register.xml" value="0.33" />
-        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_settings.xml" value="0.36096014492753625" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_register.xml" value="0.14887640449438203" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/fragment_settings.xml" value="0.13624678663239073" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/layout_parent.xml" value="0.5" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/layout_second.xml" value="0.1" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/list_group.xml" value="0.1" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/list_view.xml" value="0.1" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/layout/row.xml" value="0.24047619047619048" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
+        <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/menu/drawer_nav_menu.xml" value="0.28177083333333336" />
         <entry key="..\:/Users/IVAN NORVY GUZMAN/AndroidStudioProjects/g1finalproject/app/src/main/res/menu/options_menu.xml" value="0.25" />
       </map>
     </option>

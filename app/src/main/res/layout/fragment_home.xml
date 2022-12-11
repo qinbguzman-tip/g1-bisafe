@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeFragment">
+    tools:context=".fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dandelion" >
+        android:background="@color/dandelion">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_startJourney"
@@ -57,8 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
             android:layout_marginTop="176dp"
+            android:layout_marginEnd="25dp"
             android:background="@drawable/shape_box"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -69,10 +68,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="176dp"
+            android:alpha="0.7"
             android:text="This Week"
             android:textColor="@color/dandelion"
             android:textSize="25dp"
-            android:alpha="0.7"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,53 +109,32 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <FrameLayout
-            android:id="@+id/frameNav"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:ignore="MissingConstraints" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:background="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-            app:itemIconTint="@drawable/bottom_nav"
-            app:itemIconSize="35dp"
-            app:itemTextColor="@drawable/bottom_nav"
-            />
-
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView5"
+            android:id="@+id/txt_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="60dp"
-            android:textAllCaps="true"
             android:text="HELLO, USER!"
-            android:textStyle="bold"
-            android:textSize="40dp"
+            android:textAllCaps="true"
             android:textColor="@color/black"
+            android:textSize="40dp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView6"
+            android:id="@+id/txt_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="0dp"
             android:text="Ready to start your journey?"
-            android:textSize="16dp"
             android:textColor="@color/black"
+            android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

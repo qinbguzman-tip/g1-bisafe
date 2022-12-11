@@ -1,19 +1,20 @@
-package com.example.g1_final_project
+package com.example.g1_final_project.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.g1_final_project.R
 
-class HomeFragment : Fragment() {
+class JourneyFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_journey, container, false)
     }
 
 }

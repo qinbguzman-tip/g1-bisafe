@@ -1,19 +1,20 @@
-package com.example.g1_final_project
+package com.example.g1_final_project.activity
 
+import android.content.ClipData
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import android.view.MenuItem
+import android.widget.Button
+import androidx.navigation.*
+import androidx.navigation.ui.*
+import com.example.g1_final_project.R
 import com.example.g1_final_project.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var appBarConfiguration: AppBarConfiguration
-
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,16 +24,14 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragmentContainerView)
         val drawerLayout = binding.drawerLayout
         binding.navView.setupWithNavController(navController)
+        binding.bottomNav.setupWithNavController(navController)
 
-        // Navigation Drawer
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.historyFragment, R.id.aboutFragment, R.id.faqFragment, R.id.settingsFragment
+                R.id.homeFragment,
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -41,7 +40,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.options_menu,menu)
-        return super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.options_menu, menu)
+        return true
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = findNavController(R.id.fragmentContainerView)
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
+
 }

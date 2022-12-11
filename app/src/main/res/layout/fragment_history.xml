@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HistoryFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.HistoryFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,8 +18,7 @@
             app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -58,6 +57,7 @@
                     android:layout_toEndOf="@id/img_history"
                     android:layout_toRightOf="@+id/img_history"
                     android:drawableStart="@drawable/ic_baseline_access_time_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="5dp"
                     android:text="Time:"
                     android:textColor="@color/dandelion"
@@ -74,6 +74,7 @@
                     android:layout_toEndOf="@id/img_history"
                     android:layout_toRightOf="@+id/img_history"
                     android:drawableStart="@drawable/ic_baseline_speed_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="10dp"
                     android:text="Acceleration:"
                     android:textColor="@color/dandelion"
@@ -90,6 +91,7 @@
                     android:layout_toEndOf="@id/img_history"
                     android:layout_toRightOf="@+id/img_history"
                     android:drawableStart="@drawable/ic_baseline_social_distance_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="10dp"
                     android:text="Distance:"
                     android:textColor="@color/dandelion"
@@ -146,6 +148,7 @@
                     android:layout_toEndOf="@id/img_history2"
                     android:layout_toRightOf="@+id/img_history2"
                     android:drawableStart="@drawable/ic_baseline_access_time_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="5dp"
                     android:text="Time:"
                     android:textColor="@color/dandelion"
@@ -162,6 +165,7 @@
                     android:layout_toEndOf="@id/img_history2"
                     android:layout_toRightOf="@+id/img_history2"
                     android:drawableStart="@drawable/ic_baseline_speed_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="10dp"
                     android:text="Acceleration:"
                     android:textColor="@color/dandelion"
@@ -178,6 +182,7 @@
                     android:layout_toEndOf="@id/img_history2"
                     android:layout_toRightOf="@+id/img_history2"
                     android:drawableStart="@drawable/ic_baseline_social_distance_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="10dp"
                     android:text="Distance:"
                     android:textColor="@color/dandelion"
@@ -234,6 +239,7 @@
                     android:layout_toEndOf="@id/img_history3"
                     android:layout_toRightOf="@+id/img_history3"
                     android:drawableStart="@drawable/ic_baseline_access_time_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="5dp"
                     android:text="Time:"
                     android:textColor="@color/dandelion"
@@ -251,6 +257,7 @@
                     android:layout_toRightOf="@+id/img_history3"
                     android:drawableStart="@drawable/ic_baseline_speed_24"
                     android:drawablePadding="10dp"
+                    android:drawableTint="@color/dandelion"
                     android:text="Acceleration:"
                     android:textColor="@color/dandelion"
                     android:textSize="16dp" />
@@ -266,6 +273,7 @@
                     android:layout_toEndOf="@id/img_history3"
                     android:layout_toRightOf="@+id/img_history3"
                     android:drawableStart="@drawable/ic_baseline_social_distance_24"
+                    android:drawableTint="@color/dandelion"
                     android:drawablePadding="10dp"
                     android:text="Distance:"
                     android:textColor="@color/dandelion"
@@ -274,37 +282,15 @@
 
         </androidx.cardview.widget.CardView>
 
-        <FrameLayout
-            android:id="@+id/frameNav"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:ignore="MissingConstraints" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:background="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-            app:itemIconTint="@drawable/bottom_nav"
-            app:itemIconSize="35dp"
-            app:itemTextColor="@drawable/bottom_nav"
-            />
-
-
-
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/recyclerView"-->
-<!--            android:layout_width="409dp"-->
-<!--            android:layout_height="664dp"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/bottomNav"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/recyclerView"-->
+        <!--            android:layout_width="409dp"-->
+        <!--            android:layout_height="664dp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/bottomNav"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

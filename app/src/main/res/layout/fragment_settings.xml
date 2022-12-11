@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SettingsFragment">
+    tools:context=".fragment.SettingsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
+            android:id="@+id/in_location"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,19 +56,19 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
             android:hint="Name"
-            app:boxCornerRadiusTopStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
-            app:hintTextColor="@color/black"
+            app:boxCornerRadiusTopStart="10dp"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email"
-            app:startIconDrawable="@drawable/ic_baseline_assignment_ind_24"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/black">
+            app:layout_constraintTop_toBottomOf="@id/in_location"
+            app:startIconDrawable="@drawable/ic_baseline_assignment_ind_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
+            android:id="@+id/in_acceleration"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,20 +84,20 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
             android:hint="Username"
-            app:endIconDrawable="@drawable/ic_baseline_edit_24"
-            app:boxCornerRadiusTopStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
-            app:hintTextColor="@color/black"
+            app:boxCornerRadiusTopStart="10dp"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidthFocused="2dp"
+            app:endIconDrawable="@drawable/ic_baseline_edit_24"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
-            app:startIconDrawable="@drawable/ic_user"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/black">
+            app:startIconDrawable="@drawable/ic_user">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
+            android:id="@+id/in_distance"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,17 +113,17 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
             android:hint="Password"
-            app:boxCornerRadiusTopStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
-            app:hintTextColor="@color/black"
+            app:boxCornerRadiusTopStart="10dp"
             app:boxStrokeColor="@color/black"
             app:endIconMode="password_toggle"
             app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:layout_constraintTop_toBottomOf="@+id/in_acceleration"
             app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -140,32 +140,12 @@
             android:layout_marginEnd="25dp"
             android:backgroundTint="@color/black"
             android:text="Apply Changes"
-            android:textColor="@color/white"
+            android:textColor="@color/dandelion"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            app:layout_constraintTop_toBottomOf="@+id/in_distance" />
 
-        <FrameLayout
-            android:id="@+id/frameNav"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:ignore="MissingConstraints" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:background="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-            app:itemIconTint="@drawable/bottom_nav"
-            app:itemIconSize="35dp"
-            app:itemTextColor="@drawable/bottom_nav"
-            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
