@@ -15,15 +15,6 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/navigation" />
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navView"
-        android:background="@color/dandelion"
-        app:itemTextColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/drawer_nav_menu" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -52,6 +43,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:background="@color/dandelion"
+        app:itemTextColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
