@@ -1,4 +1,4 @@
-package com.example.g1_final_project.activity
+package com.example.g1_final_project
 
 import android.content.ClipData
 import android.content.Intent

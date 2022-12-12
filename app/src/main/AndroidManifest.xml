@@ -14,7 +14,7 @@
         android:theme="@style/Theme.G1finalproject"
         tools:targetApi="31">
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.RegisterActivity"
+            android:name=".RegisterActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
         </activity>
     </application>
