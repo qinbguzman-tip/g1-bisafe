@@ -1,12 +1,10 @@
-package com.example.g1_final_project
+package com.example.g1_final_project.activity
 
-import android.content.ClipData
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import androidx.navigation.*
 import androidx.navigation.ui.*
 import com.example.g1_final_project.R
@@ -28,7 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.historyFragment, R.id.aboutFragment, R.id.settingsFragment, R.id.faqFragment
+                R.id.homeFragment,
+                R.id.historyFragment,
+                R.id.aboutFragment,
+                R.id.settingsFragment,
+                R.id.faqFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
