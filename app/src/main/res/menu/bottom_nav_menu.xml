@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/homeFragment"
-        android:title="Home"
-        android:icon="@drawable/ic_baseline_home_24"/>
-    <item android:id="@+id/journeyFragment"
-        android:title="Journey"
-        android:icon="@drawable/bike" />
-    <item android:id="@+id/historyFragment"
-        android:title="History"
-        android:icon="@drawable/ic_baseline_history_24"/>
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/journeyFragment"
+        android:icon="@drawable/bike"
+        android:title="Journey" />
+    <item
+        android:id="@+id/historyFragment"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="History" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
 </menu>

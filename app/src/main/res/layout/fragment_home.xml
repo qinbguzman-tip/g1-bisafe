@@ -14,8 +14,8 @@
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="216dp"
             android:layout_marginTop="532dp"
+            android:layout_marginEnd="20dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
@@ -28,16 +28,15 @@
             app:icon="@drawable/ic_play_icon"
             app:iconSize="38dp"
             app:iconTint="@color/dandelion"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/img_map"
-            android:layout_width="568dp"
-            android:layout_height="503dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="228dp"
-            android:src="@drawable/_60_f_208741289_lu32fypbnwsq0rzzi6keghaujbmcrzoc_removebg_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="250dp"
+            android:src="@drawable/mapdesign_removebg_preview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,8 +44,8 @@
             android:id="@+id/img_loc"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="372dp"
             android:src="@drawable/ic_baseline_location_on_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +127,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="0dp"
             android:text="Ready to start your journey?"
             android:textColor="@color/black"
             android:textSize="16dp"

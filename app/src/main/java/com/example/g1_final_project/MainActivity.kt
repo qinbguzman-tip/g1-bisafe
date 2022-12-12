@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity() {
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        binding.navView.menu.findItem(R.id.logout).setOnMenuItemClickListener {
+            logout()
+            true
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -49,4 +54,9 @@ class MainActivity : AppCompatActivity() {
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
+    private fun logout() {
+        val logout = Intent(this, LoginActivity::class.java)
+        startActivity(logout)
+        finish()
+    }
 }
