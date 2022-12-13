@@ -10,7 +10,6 @@ import android.widget.Toast
 import com.fxn.stash.Stash
 import android.content.Intent
 import android.view.View
-import com.example.g1_final_project.activities.NavigationDrawerActivity
 import com.example.g1_final_project.databinding.ActivitySignUpBinding
 import com.example.g1_final_project.utils.Constants
 import com.google.android.gms.tasks.Task
