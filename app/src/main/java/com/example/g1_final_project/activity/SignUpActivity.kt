@@ -21,6 +21,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(b!!.root)
+        supportActionBar?.title = "BiSafe"
         progressDialog = ProgressDialog(this)
         progressDialog!!.setCancelable(false)
         progressDialog!!.setMessage("Loading...")

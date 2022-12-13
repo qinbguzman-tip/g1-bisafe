@@ -19,10 +19,12 @@ import com.google.android.gms.tasks.Task
 class LoginActivity : AppCompatActivity() {
     private var b: ActivityLoginBinding? = null
     private var progressDialog: ProgressDialog? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(b!!.root)
+        supportActionBar?.title = "BiSafe"
         progressDialog = ProgressDialog(this)
         progressDialog!!.setCancelable(false)
         progressDialog!!.setMessage("Loading...")
