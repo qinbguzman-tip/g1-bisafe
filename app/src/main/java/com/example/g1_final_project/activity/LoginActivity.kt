@@ -5,7 +5,6 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
-import com.example.g1_final_project.activities.SignUpActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import android.widget.Toast
@@ -13,7 +12,6 @@ import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.database.DataSnapshot
 import com.example.g1_final_project.models.UserModel
 import com.fxn.stash.Stash
-import com.example.g1_final_project.activities.NavigationDrawerActivity
 import com.example.g1_final_project.databinding.ActivityLoginBinding
 import com.example.g1_final_project.utils.Constants
 import com.google.android.gms.tasks.Task
@@ -88,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
                                     Stash.put(Constants.IS_LOGGED_IN, true)
                                     val intent = Intent(
                                         this@LoginActivity,
-                                        MainActivityActivity::class.java
+                                        MainActivity::class.java
                                     )
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                     finish()
