@@ -9,6 +9,7 @@ import androidx.navigation.*
 import androidx.navigation.ui.*
 import com.example.g1_final_project.R
 import com.example.g1_final_project.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -58,7 +59,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun logout() {
         val logout = Intent(this, LoginActivity::class.java)
-        startActivity(logout)
+        logout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         finish()
+        startActivity(logout)
     }
 }

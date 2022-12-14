@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dandelion"
-    tools:context=".activities.SignUpActivity">
+    tools:context=".activity.SignUpActivity">
+
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_createAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -20,114 +22,128 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
+        android:id="@+id/emailContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:hint="Email"
-        app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
-        app:hintTextColor="@color/black"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_email_24"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/black">
+        app:layout_constraintTop_toBottomOf="@+id/title_createAcc"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+        android:id="@+id/nameContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:hint="Name"
-        app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
-        app:hintTextColor="@color/black"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        app:startIconDrawable="@drawable/ic_baseline_assignment_ind_24"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/black">
+        app:layout_constraintTop_toBottomOf="@id/emailContainer"
+        app:startIconDrawable="@drawable/ic_baseline_assignment_ind_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
+        android:id="@+id/usernameContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:hint="Username"
-        app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
-        app:hintTextColor="@color/black"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        app:startIconDrawable="@drawable/ic_user"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/black">
+        app:layout_constraintTop_toBottomOf="@id/nameContainer"
+        app:startIconDrawable="@drawable/ic_user">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+        android:id="@+id/passwordContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:hint="Password"
-        app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
-        app:hintTextColor="@color/black"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
-        app:endIconMode="password_toggle"
-        app:endIconTint="@color/black"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/usernameContainer"
+        app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -135,15 +151,15 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:backgroundTint="@color/black"
         android:text="Sign up"
-        android:textColor="@color/white"
+        android:textColor="@color/dandelion"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordContainer" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBackLogin"

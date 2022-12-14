@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/dandelion"
     android:layout_height="match_parent"
-    tools:context=".activities.LoginActivity">
+    android:background="@color/dandelion"
+    tools:context=".activity.LoginActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_logLogo"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="105dp"
@@ -19,35 +20,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
+        android:id="@+id/emailContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:hint="Email"
-        app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
-        app:hintTextColor="@color/black"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_email_24"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/black">
+        app:layout_constraintTop_toBottomOf="@+id/img_logLogo"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+        android:id="@+id/passwordContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,22 +57,22 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:hint="Password"
-        app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
-        app:hintTextColor="@color/black"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
-        app:endIconMode="password_toggle"
-        app:endIconTint="@color/black"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/emailContainer"
+        app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -82,11 +84,11 @@
         android:layout_marginEnd="25dp"
         android:backgroundTint="@color/black"
         android:text="Login"
-        android:textColor="@color/white"
+        android:textColor="@color/dandelion"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordContainer" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCreate"

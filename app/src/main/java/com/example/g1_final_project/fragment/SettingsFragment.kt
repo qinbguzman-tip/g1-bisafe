@@ -18,15 +18,15 @@ class SettingsFragment : Fragment() {
     ): View? {
         b = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = b!!.root
-        b!!.email.editText!!.setText(Constants.userModel().email)
-        b!!.name.editText!!.setText(Constants.userModel().name)
-        b!!.username.editText!!.setText(Constants.userModel().username)
-        b!!.password.editText!!.setText(Constants.userModel().password)
+        b!!.emailContainer.editText!!.setText(Constants.userModel().email)
+        b!!.nameContainer.editText!!.setText(Constants.userModel().name)
+        b!!.usernameContainer.editText!!.setText(Constants.userModel().username)
+        b!!.passwordContainer.editText!!.setText(Constants.userModel().password)
         b!!.btnSubmit.setOnClickListener(View.OnClickListener {
-            val emailStr = b!!.email.editText!!.text.toString()
-            val nameStr = b!!.name.editText!!.text.toString()
-            val usernameStr = b!!.username.editText!!.text.toString()
-            val passwordStr = b!!.password.editText!!.text.toString()
+            val emailStr = b!!.emailContainer.editText!!.text.toString()
+            val nameStr = b!!.nameContainer.editText!!.text.toString()
+            val usernameStr = b!!.usernameContainer.editText!!.text.toString()
+            val passwordStr = b!!.passwordContainer.editText!!.text.toString()
             if (emailStr.isEmpty()) return@OnClickListener
             if (nameStr.isEmpty()) return@OnClickListener
             if (usernameStr.isEmpty()) return@OnClickListener
@@ -38,7 +38,7 @@ class SettingsFragment : Fragment() {
             userModel.password = passwordStr
             Constants.databaseReference().child(Constants.auth().uid!!)
                 .setValue(userModel)
-            Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Your profile has been updated.", Toast.LENGTH_SHORT).show()
         })
         return root
     }

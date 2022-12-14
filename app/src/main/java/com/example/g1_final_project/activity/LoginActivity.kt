@@ -37,65 +37,75 @@ class LoginActivity : AppCompatActivity() {
             )
         }
         b!!.btnLogin.setOnClickListener(View.OnClickListener {
-            val emailStr = b!!.email.editText!!.text.toString()
-            val passwordStr = b!!.password.editText!!.text.toString()
-            if (emailStr.isEmpty()) return@OnClickListener
-            if (passwordStr.isEmpty()) return@OnClickListener
-            progressDialog!!.show()
-            Constants.auth().signInWithEmailAndPassword(emailStr, passwordStr)
-                .addOnCompleteListener(object : OnCompleteListener<AuthResult?> {
-                    override fun onComplete(task: Task<AuthResult?>) {
-                        if (task.isSuccessful) {
-                            userModel
-                        } else {
-                            Constants.auth().signOut()
-                            progressDialog!!.dismiss()
-                            Toast.makeText(
-                                this@LoginActivity,
-                                task.exception!!.message,
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    }
+            val emailStr = b!!.emailContainer.editText!!.text.toString()
+            val passwordStr = b!!.passwordContainer.editText!!.text.toString()
+            if (emailStr.isEmpty()) {
+                val etlEmail = b!!.emailContainer
+                etlEmail.error = "Enter email"
+            } else if (passwordStr.isEmpty()) {
+                val etlPassword = b!!.passwordContainer
+                etlPassword.error = "Enter password"
+            } else {
+                progressDialog!!.show()
+                Constants.auth().signInWithEmailAndPassword(emailStr, passwordStr)
+                    .addOnCompleteListener(object : OnCompleteListener<AuthResult?> {
+                        override fun onComplete(task: Task<AuthResult?>) {
+                            if (task.isSuccessful) {
+                                userModel
+                            } else {
+                                b!!.emailContainer.error = "Invalid email"
+                                b!!.passwordContainer.error = "Invalid password"
 
-                    private val userModel: Unit
-                        private get() {
-                            Constants.databaseReference().child(
-                                Constants.auth().uid!!
-                            )
-                                .get().addOnSuccessListener { dataSnapshot ->
-                                    val userModel: UserModel?
-                                    if (dataSnapshot.exists()) {
-                                        userModel = dataSnapshot.getValue(UserModel::class.java)
-                                    } else {
-                                        userModel = UserModel()
-                                        userModel.email = emailStr
-                                        userModel.name = "nameStr"
-                                        userModel.username = "usernameStr"
-                                        userModel.password = passwordStr
-                                        Constants.databaseReference().child(
-                                            Constants.auth().uid!!
-                                        )
-                                            .setValue(userModel)
-                                    }
-                                    progressDialog!!.dismiss()
-                                    Toast.makeText(
-                                        this@LoginActivity,
-                                        "Success",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    Stash.put(Constants.USER_MODEL, userModel)
-                                    Stash.put(Constants.IS_LOGGED_IN, true)
-                                    val intent = Intent(
-                                        this@LoginActivity,
-                                        MainActivity::class.java
-                                    )
-                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                                    finish()
-                                    startActivity(intent)
-                                }
+                                Constants.auth().signOut()
+                                progressDialog!!.dismiss()
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    task.exception!!.message,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         }
-                })
+
+                        private val userModel: Unit
+                            private get() {
+                                Constants.databaseReference().child(
+                                    Constants.auth().uid!!
+                                )
+                                    .get().addOnSuccessListener { dataSnapshot ->
+                                        val userModel: UserModel?
+                                        if (dataSnapshot.exists()) {
+                                            userModel = dataSnapshot.getValue(UserModel::class.java)
+                                        } else {
+                                            userModel = UserModel()
+                                            userModel.email = emailStr
+                                            userModel.name = "nameStr"
+                                            userModel.username = "usernameStr"
+                                            userModel.password = passwordStr
+                                            Constants.databaseReference().child(
+                                                Constants.auth().uid!!
+                                            )
+                                                .setValue(userModel)
+                                        }
+                                        progressDialog!!.dismiss()
+                                        Toast.makeText(
+                                            this@LoginActivity,
+                                            "Welcome, " + Constants.userModel().username + "!",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                        Stash.put(Constants.USER_MODEL, userModel)
+                                        Stash.put(Constants.IS_LOGGED_IN, true)
+                                        val intent = Intent(
+                                            this@LoginActivity,
+                                            MainActivity::class.java
+                                        )
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                                        finish()
+                                        startActivity(intent)
+                                    }
+                            }
+                    })
+            }
+
         })
     }
 }
