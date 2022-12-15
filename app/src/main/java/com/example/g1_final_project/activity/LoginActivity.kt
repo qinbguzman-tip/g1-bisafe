@@ -51,6 +51,8 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(object : OnCompleteListener<AuthResult?> {
                         override fun onComplete(task: Task<AuthResult?>) {
                             if (task.isSuccessful) {
+                                b!!.emailContainer.error = null
+                                b!!.passwordContainer.error = null
                                 userModel
                             } else {
                                 b!!.emailContainer.error = "Invalid email"

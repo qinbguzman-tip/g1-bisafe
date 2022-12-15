@@ -52,10 +52,10 @@ class SignUpActivity : AppCompatActivity() {
                 val passwordStr = b!!.passwordContainer.editText!!.text.toString()
                 val userModel = UserModel()
 
-                b!!.emailContainer.helperText = "Required"
-                b!!.nameContainer.helperText = "Required"
-                b!!.usernameContainer.helperText = "Required"
-                b!!.emailContainer.helperText = "Required"
+//                b!!.emailContainer.helperText = "Required"
+//                b!!.nameContainer.helperText = "Required"
+//                b!!.usernameContainer.helperText = "Required"
+//                b!!.emailContainer.helperText = "Required"
 
                 userModel.email = emailStr
                 userModel.name = nameStr
@@ -166,7 +166,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun passwordFocusListener() {
         b?.passwordEditText?.setOnFocusChangeListener { _, focused ->
-            if (!focused) {
+            if (focused) {
                 b!!.passwordContainer.helperText = validPassword()
             }
         }
