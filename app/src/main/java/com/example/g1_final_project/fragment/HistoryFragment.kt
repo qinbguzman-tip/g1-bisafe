@@ -73,7 +73,7 @@ class HistoryFragment : Fragment() {
             val model = historyArrayList!![position]
             holder.title.text = model!!.title
             holder.time.text = "Time: " + model.time
-            holder.distance.text = "Distance: " + model.distance + "mi"
+            holder.distance.text = "Distance: " + model.distance + "km"
         }
 
         override fun getItemCount(): Int {

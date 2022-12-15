@@ -85,7 +85,7 @@ class HomeFragment() : Fragment() {
                         currentMileagesDouble = (snapshot
                             .getValue<Double>(Double::class.java)!!)
                         val value = currentMileagesDouble.toString()
-                        b!!.dashKilometer.text = "$value mi"
+                        b!!.dashKilometer.text = "$value km"
                     }
                 }
 
