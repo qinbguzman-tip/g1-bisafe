@@ -18,7 +18,7 @@
         android:id="@+id/txt_navName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Juan Dela Cruz"
+        android:text="BiSafe"
         android:textColor="@color/dandelion"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0.7"
-        android:text="example_email.test.com"
+        android:text="Experience a Safe Journey"
         android:textColor="@color/dandelion"
         android:textSize="14sp" />
 

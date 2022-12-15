@@ -9,10 +9,10 @@
             android:title="Home"
             app:showAsAction="ifRoom" />
         <item
-            android:id="@+id/journeyFragment"
+            android:id="@+id/mapsFragment"
             android:checkable="true"
-            android:icon="@drawable/bike"
-            android:title="Journey"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Map"
             app:showAsAction="ifRoom" />
         <item
             android:id="@+id/historyFragment"

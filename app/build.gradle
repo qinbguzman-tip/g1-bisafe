@@ -94,4 +94,9 @@ dependencies {
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
 
     implementation 'com.arsvechkarev:timerx:2.3.2'
+
+    // maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.gms.google-services:com.google.gms.google-services.gradle.plugin:4.3.14'
 }
