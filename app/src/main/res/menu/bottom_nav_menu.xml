@@ -5,9 +5,9 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
     <item
-        android:id="@+id/journeyFragment"
-        android:icon="@drawable/bike"
-        android:title="Journey" />
+        android:id="@+id/mapsFragment"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="Map" />
     <item
         android:id="@+id/historyFragment"
         android:icon="@drawable/ic_baseline_history_24"

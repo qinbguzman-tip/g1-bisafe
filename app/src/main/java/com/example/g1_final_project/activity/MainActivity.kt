@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.historyFragment,
                 R.id.aboutFragment,
                 R.id.settingsFragment,
-                R.id.faqFragment
+                R.id.faqFragment,
+                R.id.mapsFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             logout()
             true
         }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -58,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun logout() {
         val logout = Intent(this, LoginActivity::class.java)
+        logout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(logout)
         finish()
     }

@@ -12,22 +12,23 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:src="@drawable/logopd_removebg_preview"
-
         app:tint="@color/dandelion" />
 
     <TextView
+        android:id="@+id/txt_navName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Juan Dela Cruz"
+        android:text="BiSafe"
         android:textColor="@color/dandelion"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/txt_navEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="0.7"
-        android:text="example_email.test.com"
+        android:text="Experience a Safe Journey"
         android:textColor="@color/dandelion"
         android:textSize="14sp" />
 
